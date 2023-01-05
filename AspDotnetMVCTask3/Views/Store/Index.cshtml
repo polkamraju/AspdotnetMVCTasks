@@ -1,0 +1,64 @@
+﻿@model IEnumerable<AspDotnetMVCTask3.Models.StoreItem>
+
+@{ ViewData["Title"] = "Store Items"; }
+
+<h3>Store Items</h3>
+
+<div class="col-md-12 form-group">
+    <div class="row">
+        <div class="col-md-8 pl-0 div-stock-items">
+            <br />
+            <table class="table table-hover tbl-items">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ImageUrl)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="tbl-body-items">
+                    @foreach (var item in Model)
+                    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td id="tdItemName">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" style="height:30px;" />
+            </td>
+            <td>
+                @Html.HiddenFor(modelItem => item.Cost)
+            </td>
+            <td id="tdItemPrice">
+                <span id="spanItemCost"> @Html.HiddenFor(modelItem => item.Cost)</span>
+            </td>
+            <td>
+                @Html.HiddenFor(modelItem => item.Cost)
+            </td>
+        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 div-item-img-preview-align" id="divItemPreview">
+            <div class="div-item-img-preview text-center">
+                <img id="imgItemPreview" src="" style="height:250px;" />
+                <div class="">
+                    <span id="spanItemName"></span>
+                    <span class="item-total" id="spanItemTotal"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@*https://www.c-sharpcorner.com/blogs/drop-down-list-selected-index-changed-event-in-mvc*@

@@ -1,0 +1,32 @@
+﻿@model AspDotnetMVCTask6.Models.FlowersViewModel
+
+@{ ViewData["Title"] = "Flowers"; }
+
+<h3>Flowers</h3>
+
+<div class="col-md-12 form-group">
+    <div class="row">
+        <div class="col-md-4 pl-0 div-flower-items">
+            <br />
+            @foreach (var item in Model.flowersList)
+            {
+                <div class="form-group">
+                    <input type="radio" name="flower" id="@item.Id" value="@item.Name" />
+                    <label id="lbl_@item.Id">@item.Name</label>
+                    <input type="hidden" id="hdn_@item.Id" value="@item.ImageUrl" />
+                </div>
+            }
+            <div class="form-group text-center">
+                <button type="button" class="btn btn-outline-primary" id="btnFlowerPreview">Preview</button>
+            </div>
+        </div>
+        <div class="col-md-8 div-item-img-preview-align" id="divItemPreview">
+            <div class="div-item-img-preview text-center">
+                <img id="imgFlowerPreview" src="" style="height:250px;" />
+                <div class="form-group">
+                    <span id="spanFlowerName"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
