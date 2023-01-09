@@ -8,7 +8,6 @@ C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\bin\Debug\netc
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\bin\Debug\netcoreapp3.1\AspDotnetMVCTask1.pdb
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\bin\Debug\netcoreapp3.1\AspDotnetMVCTask1.Views.dll
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\bin\Debug\netcoreapp3.1\AspDotnetMVCTask1.Views.pdb
-C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\obj\Debug\netcoreapp3.1\AspDotnetMVCTask1.csproj.AssemblyReference.cache
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\obj\Debug\netcoreapp3.1\AspDotnetMVCTask1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\obj\Debug\netcoreapp3.1\AspDotnetMVCTask1.AssemblyInfoInputs.cache
 C:\Users\rpolkam\source\repos\AspDotnetMVCTasks\AspDotnetMVCTask1\obj\Debug\netcoreapp3.1\AspDotnetMVCTask1.AssemblyInfo.cs

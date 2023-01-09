@@ -1,0 +1,75 @@
+﻿@model AspDotnetMVCTask4.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<h2>Add</h2>
+
+@using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>User Details</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*@Html.HiddenFor(model => model.UserId)*@
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName) &nbsp;
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.UserName, "", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CreditCardSelected)
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CreditCardSelected, new List<SelectListItem>
+           {
+              new SelectListItem{ Text="Visa", Value = "Visa" },
+              new SelectListItem{ Text="MasterCard", Value = "MasterCard" },
+              new SelectListItem{ Text="Amex", Value = "Amex" },
+              new SelectListItem{ Text="Diners", Value = "Diners" },
+              new SelectListItem{ Text="Unknown", Value = "Unknown" }
+           }, "Select Card", new { @class = "form-control", @placeholder = "Select Card" })
+            @Html.ValidationMessageFor(model => model.CreditCardSelected, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.ModeOfPayment) &nbsp;
+            <div class="col-md-10">
+                @Html.DropDownList("MyCreditCards", (IEnumerable<SelectListItem>)ViewBag.MyCreditCards,"Select Card")
+                @Html.ValidationMessageFor(model => model.ModeOfPayment, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.CreditCardNumber) &nbsp;
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.CreditCardNumber, "", new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CreditCardNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+    @if (ViewBag.Success != null && ViewBag.Success == true)
+    {
+        <p>The result is @ViewBag.Result</p>
+    }
+
+</div>
+ } 
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

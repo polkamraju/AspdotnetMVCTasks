@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- The Modal -->
+<div>
+    <div style="max-width: 60% !important;">
+        <div>
+            <!-- Modal Header -->
+            <div>
+                <h4 >User</h4>
+                @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Name <span class="mandatory">*</span></label>
+                            <input type="text" class="form-control txt-user" id="txtUserName" placeholder="Please type here" maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label>Address <span class="mandatory">*</span></label>
+                            <textarea class="form-control txt-user" id="taUserAddress" rows="3" placeholder="Please type here" maxlength="500"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Nationality <span class="mandatory">*</span></label>
+                            <input type="text" class="form-control txt-user" id="txtUserNationality" placeholder="Please type here" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Date of birth <span class="mandatory">*</span></label>
+                            <input type="date" class="form-control txt-user" id="txtUserDOB" placeholder="Please select date" min="1901-01-01" max="2090-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label>Skills <span class="mandatory">*</span></label>
+                            <textarea class="form-control txt-user" id="taUserSkills" rows="3" placeholder="Please type here" maxlength="500"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Country <span class="mandatory">*</span></label>
+                            <select class="form-control ddl-user" id="ddlUserCountry">
+                                <option value="">Please select</option>
+                                <option value="1">India</option>
+                                <option value="2">America</option>
+                                <option value="3">UK</option>
+                                <option value="-1">Other</option>
+                            </select>
+                            <input type="text" class="form-control txt-user mt-3" id="txtUserCountry" placeholder="Please type here" maxlength="100" style="display:none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnUserCreation">Create</button>
+            </div>
+
+        </div>
+    </div>
+</div>
